@@ -23,7 +23,7 @@ describe('My Login application', () => {
             'Sauce Labs Backpack')
     })
     it ('should add items to cart', async () => {
-       await LoginPage.addToCart()
+       await LoginPage.addToCart();
         await expect(SecurePage.cartAdd).toBeExisting();
     })
 })
