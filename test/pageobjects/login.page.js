@@ -20,6 +20,13 @@ class LoginPage extends Page {
         return $('#add-to-cart-sauce-labs-backpack');
 
     }
+    
+    get shoppingCart() {
+        return $('#shopping_cart_container');
+    }
+    get firstCheckout() {
+        return $('#checkout')
+    }
 
     async login (someUsername, thePassword) {
         await this.inputUsername.setValue(someUsername);
@@ -35,6 +42,8 @@ class LoginPage extends Page {
   
     async addToCart () {
         (await this.addToCar).click();
+        (await this.shoppingCart).click();
+        (await this.firstCheckout).click();
     }
   
     open () {
