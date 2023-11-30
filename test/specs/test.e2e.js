@@ -22,6 +22,8 @@ describe('My Login application', () => {
         await expect(SecurePage.inventoryList).toHaveTextContaining(
             'Sauce Labs Backpack')
     })
-
+    it ('should add items to cart', async () => {
+        await expect(SecurePage.cartAdd).toBeExisting();
+    })
 })
 
