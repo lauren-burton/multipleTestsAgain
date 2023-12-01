@@ -53,7 +53,7 @@ describe('Checking out', () => {
         await expect(SecurePage.finishCheckout).toBeExisting();
     })
 })
-
+//logging out
 describe('Logging out', () => {
     it('should successfully log out', async () => {
         await LoginPage.loggingOut();
