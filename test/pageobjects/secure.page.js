@@ -20,6 +20,10 @@ class SecurePage extends Page {
         return $('#checkout_complete_container')
 
     }
+    
+    get refuseToCheckout() {
+        return $('.error-message-container.error')
+    }
 }
 
 export default new SecurePage();

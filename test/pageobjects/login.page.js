@@ -55,6 +55,10 @@ class LoginPage extends Page {
     get logoutBtn () {
         return $('#logout_sidebar_link')
     }
+
+    get goBack (){
+        return $('#continue-shopping')
+    }
     async login (someUsername, thePassword) {
         await this.inputUsername.setValue(someUsername);
         await this.inputPassword.setValue(thePassword);
@@ -66,13 +70,33 @@ class LoginPage extends Page {
         await this.inputPassword.setValue(somePassword);
         await this.btnSubmit.click();
     }
-  
+    
+    async stressTesting() {
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.goBack).click();
+    }
     async addToCart () {
         (await this.addToCar).click();
         (await this.shoppingCart).click();
        
     }
     
+    async dontCheckout () {
+        (await this.firstCheckout).click();
+        (await this.secondCheckout).click();
+    }
     async checkout (first, last, zip) {
         (await this.firstCheckout).click();
         (await this.firstName).setValue(first);

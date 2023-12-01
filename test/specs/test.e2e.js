@@ -21,9 +21,14 @@ describe('My Login application', () => {
         await expect(SecurePage.inventoryList).toBeExisting()
         await expect(SecurePage.inventoryList).toHaveTextContaining(
             'Sauce Labs Backpack')
-    })
+    }) })
    
 describe('Adding to Cart', () => {
+        it ('will be stress tested', async () => {
+            await LoginPage.stressTesting();
+
+            await expect(SecurePage.inventoryList).toBeExisting();
+        })
         it ('should add items to cart', async () => {
             await LoginPage.addToCart();
      
@@ -33,6 +38,10 @@ describe('Adding to Cart', () => {
     })
 
 describe('Checking out', () => {
+    it ('should not checkout', async () => {
+        await LoginPage.dontCheckout();
+        await expect(SecurePage.refuseToCheckout).toBeExisting();
+    })
     it ('should checkout', async () => {
         await LoginPage.checkout('john', 'smith', '8');
 
@@ -50,4 +59,4 @@ describe('Logging out', () => {
         await LoginPage.loggingOut();
     });
 })
-})
+
