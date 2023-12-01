@@ -48,6 +48,6 @@ describe('Checking out', () => {
 describe('Logging out', () => {
     it('should successfully log out', async () => {
         await LoginPage.loggingOut();
-    })
+    });
 })
 })
