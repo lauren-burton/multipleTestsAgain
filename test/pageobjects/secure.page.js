@@ -15,6 +15,11 @@ class SecurePage extends Page {
     get cartAdd () {
         return $('.shopping_cart_badge')
     }
+
+    get finishCheckout() {
+        return $('#checkout_complete_container')
+
+    }
 }
 
 export default new SecurePage();

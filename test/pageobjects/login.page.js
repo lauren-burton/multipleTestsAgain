@@ -28,6 +28,33 @@ class LoginPage extends Page {
         return $('#checkout')
     }
 
+    get firstName () {
+        return $('#first-name')
+    }
+
+    get lastName () {
+        return $('#last-name')
+    }
+
+    get zipCode() {
+        return $('#postal-code')
+    }
+
+    get secondCheckout() {
+        return $('#continue')
+    }
+
+    get finish() {
+        return $('#finish')
+    }
+
+    get hamburgerMenu () {
+        return $('#react-burger-menu-btn')
+    }
+
+    get logoutBtn () {
+        return $('#logout_sidebar_link')
+    }
     async login (someUsername, thePassword) {
         await this.inputUsername.setValue(someUsername);
         await this.inputPassword.setValue(thePassword);
@@ -43,8 +70,29 @@ class LoginPage extends Page {
     async addToCart () {
         (await this.addToCar).click();
         (await this.shoppingCart).click();
-        (await this.firstCheckout).click();
+       
     }
+    
+    async checkout (first, last, zip) {
+        (await this.firstCheckout).click();
+        (await this.firstName).setValue(first);
+        (await this.lastName).setValue(last);
+        (await this.zipCode).setValue(zip);
+    }
+    
+    async finishingUP(){
+       
+        (await this.secondCheckout).click();
+        (await this.secondCheckout).click();
+        (await this.finish).click();
+    }
+
+    async loggingOut() {
+
+        (await this.hamburgerMenu).click();
+        (await this.logoutBtn).click();
+    }
+    
   
     open () {
         return super.open('login');

@@ -22,9 +22,32 @@ describe('My Login application', () => {
         await expect(SecurePage.inventoryList).toHaveTextContaining(
             'Sauce Labs Backpack')
     })
-    it ('should add items to cart', async () => {
-       await LoginPage.addToCart()
-        await expect(SecurePage.cartAdd).toBeExisting();
+   
+describe('Adding to Cart', () => {
+        it ('should add items to cart', async () => {
+            await LoginPage.addToCart();
+     
+             await expect(SecurePage.cartAdd).toBeExisting();
+         })
+        
+    })
+
+describe('Checking out', () => {
+    it ('should checkout', async () => {
+        await LoginPage.checkout('john', 'smith', '8');
+
+        
+    })
+    it ('Should finish up', async () => {
+        await LoginPage.finishingUP();
+
+        await expect(SecurePage.finishCheckout).toBeExisting();
     })
 })
 
+describe('Logging out', () => {
+    it('should successfully log out', async () => {
+        await LoginPage.loggingOut();
+    })
+})
+})
