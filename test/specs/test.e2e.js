@@ -36,7 +36,7 @@ describe('Adding to Cart', () => {
          })
         
     })
-
+//checking out
 describe('Checking out', () => {
     it ('should not checkout', async () => {
         await LoginPage.dontCheckout();

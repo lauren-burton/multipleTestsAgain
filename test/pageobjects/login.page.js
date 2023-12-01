@@ -85,6 +85,19 @@ class LoginPage extends Page {
         (await this.shoppingCart).click();
         (await this.shoppingCart).click();
         (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
+        (await this.shoppingCart).click();
         (await this.goBack).click();
     }
     async addToCart () {
