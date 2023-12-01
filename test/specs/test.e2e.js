@@ -22,7 +22,7 @@ describe('My Login application', () => {
         await expect(SecurePage.inventoryList).toHaveTextContaining(
             'Sauce Labs Backpack')
     }) })
-   
+   // adding to cart
 describe('Adding to Cart', () => {
         it ('will be stress tested', async () => {
             await LoginPage.stressTesting();
